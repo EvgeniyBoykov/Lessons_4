@@ -9,17 +9,14 @@ import java.util.HashMap;
 // (в случае однофамильцев), тогда при запросе такой фамилии должны выводиться все телефоны.
 public class PhoneBook {
     private HashMap<String, ArrayList<String>> phone_Book = new HashMap<>();
-
     public void add(String lastName, String phoneNumber) {
         ArrayList<String> phonesForLastName = phone_Book.getOrDefault(lastName, new ArrayList<>());
         phonesForLastName.add(phoneNumber);
         phone_Book.put(lastName, phonesForLastName);
     }
-
     public ArrayList<String> get(String lastName) {
         return phone_Book.get(lastName);
     }
-
     public static void main(String[] args) {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Бачуркин", "+7925645823");
