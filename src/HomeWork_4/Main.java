@@ -12,8 +12,7 @@ public class Main {
             if (unique.containsKey(word[i])) {
                 unique.put(word[i], unique.get(word[i]) + 1);
             } else {
-                unique.put(word[i], 1);}
-        }
+                unique.put(word[i], 1);}}
         System.out.println(unique);
     }
 }
